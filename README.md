@@ -1,23 +1,29 @@
+
 # homerViz
 
 ![Maintainer](https://img.shields.io/badge/maintainer-ckntav-blue)
-![Last commit](https://img.shields.io/github/last-commit/ckntav/homerViz)
+![Last
+commit](https://img.shields.io/github/last-commit/ckntav/homerViz)
 
 **Visualization tools for HOMER motif enrichment results**
 
 **homerViz** is an R package that parses
-[HOMER](http://homer.ucsd.edu/homer/) `findMotifsGenome.pl` output directories
-into tidy data frames and generates publication-ready visualizations.
+[HOMER](http://homer.ucsd.edu/homer/) `findMotifsGenome.pl` output
+directories into tidy data frames, generates publication-ready
+visualizations, and produces interactive HTML reports to facilitate the
+exploration of motif enrichment results.
 
 ## Features
 
-- **Parsing** — reads `knownResults.txt` and `homerResults/motif*.motif` files into tidy data frames with consistent column names.
-- **Dot plots** — top enriched motifs ranked by significance, coloured and
-  sized by fold enrichment.
-- **Scatter plots** — % target vs % background, coloured by significance and
-  sized by fold enrichment.
-- **Logo panels** — motif logo grids with embedded enrichment statistics.
-- **HTML reports** — interactive, sortable table reports with motif logos for both known and de novo results.
+- **Parsing**: reads `knownResults.txt` and `homerResults/motif*.motif`
+  files into tidy data frames with consistent column names.
+- **Dot plots**: top enriched motifs ranked by significance, coloured
+  and sized by fold enrichment.
+- **Scatter plots**: % target vs % background, coloured by significance
+  and sized by fold enrichment.
+- **Logo panels**: motif logo grids with embedded enrichment statistics.
+- **HTML reports**: interactive, sortable table reports with motif logos
+  for both known and de novo results.
 
 ## Installation
 
@@ -34,56 +40,92 @@ devtools::install_github("ckntav/homerViz")
 
 ## Quick start
 
-This brief example demonstrates the visualization capabilities of homerViz using MED1 ChIP-seq data from the A549 cell line, referenced against the HOCOMOCO motif database (v14).
+This brief example demonstrates the visualization capabilities of
+homerViz using MED1 ChIP-seq data from the A549 cell line, referenced
+against the HOCOMOCO motif database (v14).
 
-> command line: findMotifsGenome.pl A549_MED1_Ctrl.stdchr.chr1.bed hg38 A549_MED1_Ctrl_chr1_vs_HOCOMOCOv14_0p0001 -p 8 -size 200 -mask -mknown H14CORE_homer_format_0.0001.motif -mcheck H14CORE_homer_format_0.0001.motif
+The motif enrichment analysis was performed using this command line:
 
+``` bash
+findMotifsGenome.pl A549_MED1_Ctrl.stdchr.chr1.bed \
+    hg38 \
+    A549_MED1_Ctrl_chr1_vs_HOCOMOCOv14_0p0001 \
+    -p 8 -size 200 -mask \
+    -mknown H14CORE_homer_format_0.0001.motif \
+    -mcheck H14CORE_homer_format_0.0001.motif
+```
 
 ### 1. Read HOMER output files
 
-```r
+``` r
 library(homerViz)
 
-# Read a HOMER output directory
+# Define the example HOMER output directory
 example_dir <- system.file(
     "extdata",
     "A549_MED1_Ctrl_chr1_vs_HOCOMOCOv14_0p0001",
     package = "homerViz"
 )
-homer <- read_homer_output("path/to/homer_output/")
+
+# Read a HOMER output directory
+homer <- read_homer_output(example_dir)
+#> Reading: A549_MED1_Ctrl_chr1_vs_HOCOMOCOv14_0p0001
+#>   * Known motifs:  knownResults.txt
+#>   * De novo motifs: 22 motifs in homerResults/
 ```
 
-### 2. Visualize top motif
+### 2. Visualize top motifs
 
 #### Dot plots
-```r
+
+``` r
 plot_known_dotplot(homer)
 plot_denovo_dotplot(homer)
 ```
 
+<img src="man/figures/README-dot_plot-1.png" alt="" width="50%" /><img src="man/figures/README-dot_plot-2.png" alt="" width="50%" />
+
 #### Scatter plots
-```r
-plot_known_scatter(homer)
+
+``` r
+plot_known_scatter(homer, size_by_fe = FALSE)
 plot_denovo_scatter(homer)
 ```
 
+<img src="man/figures/README-scatter_plot-1.png" alt="" width="50%" /><img src="man/figures/README-scatter_plot-2.png" alt="" width="50%" />
+
 #### Logo
-```r
+
+``` r
 plot_known_logos(homer)
 plot_denovo_logos(homer)
 ```
 
+<img src="man/figures/README-logo-1.png" alt="" width="50%" /><img src="man/figures/README-logo-2.png" alt="" width="50%" />
+
 ### 3. Interactive HTML reports
 
-```r
+``` r
 save_homer_html(homer)
 ```
 
-Example reports generated from the bundled dataset are available online:
+Here are examples of the HTML reports
 
-- [Known motif enrichment report](https://ckntav.github.io/homerViz/example/knownResults_homerViz.html)
-- [De novo motif enrichment report](https://ckntav.github.io/homerViz/example/homerResults_homerViz.html)
-
+- [Known motif enrichment
+  report](https://ckntav.github.io/homerViz/example/knownResults_homerViz.html)
+- [De novo motif enrichment
+  report](https://ckntav.github.io/homerViz/example/homerResults_homerViz.html)
 
 > **Note:** The HTML reports load Bootstrap, DataTables, and jQuery from
 > public CDNs and require an internet connection to render correctly.
+
+## References
+
+- HOMER software: <http://homer.ucsd.edu/homer/>
+
+- Heinz S, Benner C, Spann N, Bertolino E, Lin YC, Lassman P, Bhatt DL,
+  Benner C, Glass CK. Simple combinations of lineage-determining
+  transcription factors prime cis-regulatory elements required for
+  macrophage and B cell identities. *Mol Cell.* 2010 May
+  28;38(4):576-589.
+  [doi:10.1016/j.molcel.2010.05.004](https://doi.org/10.1016/j.molcel.2010.05.004)
