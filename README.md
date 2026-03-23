@@ -109,8 +109,8 @@ plot_denovo_logos(homer)
 save_homer_html(homer)
 ```
 
-Here are examples of the HTML reports. Click on a screenshot to open the
-interactive report in a new tab.
+Here are examples of the HTML reports (click on a screenshot to open the
+interactive report):
 
 **Known motifs**
 
@@ -120,7 +120,7 @@ interactive report in a new tab.
 
 <th>
 
-Original
+original
 </th>
 
 <th>
@@ -154,7 +154,7 @@ homerViz
 
 <th>
 
-Original
+original
 </th>
 
 <th>
