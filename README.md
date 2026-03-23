@@ -109,23 +109,102 @@ plot_denovo_logos(homer)
 save_homer_html(homer)
 ```
 
-Here are examples of the HTML reports
+Here are examples of the HTML reports. Click on a screenshot to open the
+interactive report in a new tab.
 
-- [Known motif enrichment
-  report](https://ckntav.github.io/homerViz/example/knownResults_homerViz.html)
-- [De novo motif enrichment
-  report](https://ckntav.github.io/homerViz/example/homerResults_homerViz.html)
+**Known motifs**
+
+<table>
+
+<tr>
+
+<th>
+
+Original
+</th>
+
+<th>
+
+homerViz
+</th>
+
+</tr>
+
+<tr>
+
+<td>
+
+<a href="https://ckntav.github.io/homerViz/example/knownResults_original.html" target="_blank"><img src="man/figures/screenshot_knownResults_original.png" alt="Original known motifs report" width="350"/></a>
+</td>
+
+<td>
+
+<a href="https://ckntav.github.io/homerViz/example/knownResults_homerViz.html" target="_blank"><img src="man/figures/screenshot_knownResults_homerViz.png" alt="homerViz known motifs report" width="350"/></a>
+</td>
+
+</tr>
+
+</table>
+
+**De novo motifs**
+
+<table>
+
+<tr>
+
+<th>
+
+Original
+</th>
+
+<th>
+
+homerViz
+</th>
+
+</tr>
+
+<tr>
+
+<td>
+
+<a href="https://ckntav.github.io/homerViz/example/homerResults_original.html" target="_blank"><img src="man/figures/screenshot_homerResults_original.png" alt="Original de novo motifs report" width="350"/></a>
+</td>
+
+<td>
+
+<a href="https://ckntav.github.io/homerViz/example/homerResults_homerViz.html" target="_blank"><img src="man/figures/screenshot_homerResults_homerViz.png" alt="homerViz de novo motifs report" width="350"/></a>
+</td>
+
+</tr>
+
+</table>
 
 > **Note:** The HTML reports load Bootstrap, DataTables, and jQuery from
 > public CDNs and require an internet connection to render correctly.
 
 ## References
 
-- HOMER software: <http://homer.ucsd.edu/homer/>
+#### Example A549 MED1 ChIP-seq dataset
 
-- Heinz S, Benner C, Spann N, Bertolino E, Lin YC, Lassman P, Bhatt DL,
-  Benner C, Glass CK. Simple combinations of lineage-determining
-  transcription factors prime cis-regulatory elements required for
-  macrophage and B cell identities. *Mol Cell.* 2010 May
-  28;38(4):576-589.
-  [doi:10.1016/j.molcel.2010.05.004](https://doi.org/10.1016/j.molcel.2010.05.004)
+- Tav, C., Fournier, É., Fournier, M., Khadangi, F., Baguette, A., Côté,
+  M.C., Silveira, M.A.D., Bérubé-Simard, F.-A., Bourque, G., Droit, A.,
+  & Bilodeau, S. (2023). *Glucocorticoid stimulation induces
+  regionalized gene responses within topologically associating domains.*
+  **Frontiers in Genetics**, 14, 1237092.
+  <a href="https://doi.org/10.3389/fgene.2023.1237092" target="_blank">
+  doi:10.3389/fgene.2023.1237092 </a>
+
+#### HOMER
+
+- HOMER software :
+  <a href="http://homer.ucsd.edu/homer/" target="_blank">
+  http://homer.ucsd.edu/homer/ </a>
+
+- Heinz, S., Benner, C., Spann, N., Bertolino, E., Lin, Y.C., Lassman,
+  P., Bhatt, D.L., Benner, C., & Glass, C.K. (2010). *Simple
+  combinations of lineage-determining transcription factors prime
+  cis-regulatory elements required for macrophage and B cell
+  identities.* **Molecular Cell**, 38(4), 576–589.
+  <a href="https://doi.org/10.1016/j.molcel.2010.05.004" target="_blank">
+  doi:10.1016/j.molcel.2010.05.004 </a>
