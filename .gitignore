@@ -3,3 +3,6 @@
 .Rdata
 .DS_Store
 *.Rproj
+vignettes/*.html
+vignettes/*_cache/
+vignettes/*_files/
