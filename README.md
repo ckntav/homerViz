@@ -112,7 +112,7 @@ save_homer_html(homer)
 Here are examples of the HTML reports (click on a screenshot to open the
 interactive report):
 
-**Known motifs**
+#### Known motifs
 
 <table>
 
@@ -146,7 +146,7 @@ homerViz
 
 </table>
 
-**De novo motifs**
+#### De novo motifs
 
 <table>
 
