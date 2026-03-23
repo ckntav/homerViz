@@ -88,7 +88,7 @@ plot_denovo_dotplot(homer)
 #### Scatter plots
 
 ``` r
-plot_known_scatter(homer, size_by_fe = FALSE)
+plot_known_scatter(homer)
 plot_denovo_scatter(homer)
 ```
 
