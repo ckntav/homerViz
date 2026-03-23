@@ -83,7 +83,7 @@ plot_known_dotplot(homer)
 plot_denovo_dotplot(homer)
 ```
 
-<img src="man/figures/README-dot_plot-1.png" alt="" width="50%" /><img src="man/figures/README-dot_plot-2.png" alt="" width="50%" />
+<img src="man/figures/README-dot-plot-1.png" alt="" width="50%" /><img src="man/figures/README-dot-plot-2.png" alt="" width="50%" />
 
 #### Scatter plots
 
@@ -92,7 +92,7 @@ plot_known_scatter(homer)
 plot_denovo_scatter(homer)
 ```
 
-<img src="man/figures/README-scatter_plot-1.png" alt="" width="50%" /><img src="man/figures/README-scatter_plot-2.png" alt="" width="50%" />
+<img src="man/figures/README-scatter-plot-1.png" alt="" width="50%" /><img src="man/figures/README-scatter-plot-2.png" alt="" width="50%" />
 
 #### Logo
 
