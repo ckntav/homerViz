@@ -71,7 +71,7 @@ example_dir <- system.file(
 homer <- read_homer_output(example_dir)
 #> Reading: A549_MED1_Ctrl_chr1_vs_HOCOMOCOv14_0p0001
 #>   * Known motifs:  knownResults.txt
-#>   * De novo motifs: 22 motifs in homerResults/
+#>   * De novo motifs: 34 motifs in homerResults/
 ```
 
 ### 2. Visualize top motifs
@@ -81,6 +81,7 @@ homer <- read_homer_output(example_dir)
 ``` r
 plot_known_dotplot(homer)
 plot_denovo_dotplot(homer)
+#> 3 de novo motifs removed (fold enrichment NA, zero background occurrences), ranks: 27, 28, 31.
 ```
 
 <img src="man/figures/README-dot-plot-1.png" alt="" width="50%" /><img src="man/figures/README-dot-plot-2.png" alt="" width="50%" />
