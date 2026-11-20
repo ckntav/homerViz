@@ -104,6 +104,16 @@ plot_denovo_logos(homer)
 
 <img src="man/figures/README-logo-1.png" alt="" width="50%" /><img src="man/figures/README-logo-2.png" alt="" width="50%" />
 
+#### Saving plots
+
+Plots can be saved to PDF, PNG or SVG with `saveViz()` (re-exported from
+[gVenn](https://bioconductor.org/packages/gVenn)):
+
+``` r
+p <- plot_known_dotplot(homer)
+saveViz(p, output_file = "known_dotplot", format = "pdf", width = 7, height = 6)
+```
+
 ### 3. Interactive HTML reports
 
 ``` r
