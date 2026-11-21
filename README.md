@@ -72,7 +72,7 @@ example_dir <- system.file(
 homer <- read_homer_output(example_dir)
 #> Reading: A549_MED1_Ctrl_chr1_vs_HOCOMOCOv14_0p0001
 #>   * Known motifs:  knownResults.txt
-#>   * De novo motifs: 34 motifs in homerResults/
+#>   * De novo motifs: 26 motifs in homerResults/
 ```
 
 ### 2. Visualize top motifs
@@ -82,7 +82,7 @@ homer <- read_homer_output(example_dir)
 ``` r
 plot_known_dotplot(homer)
 plot_denovo_dotplot(homer)
-#> 3 de novo motifs removed (fold enrichment NA, zero background occurrences), ranks: 27, 28, 31.
+#> 1 de novo motif removed (fold enrichment NA, zero background occurrences), rank: 3.
 ```
 
 <img src="man/figures/README-dot-plot-1.png" alt="" width="50%" /><img src="man/figures/README-dot-plot-2.png" alt="" width="50%" />
@@ -220,3 +220,29 @@ homerViz
   identities.* **Molecular Cell**, 38(4), 576–589.
   <a href="https://doi.org/10.1016/j.molcel.2010.05.004" target="_blank">
   doi:10.1016/j.molcel.2010.05.004 </a>
+
+#### HOCOMOCO v14
+
+- HOCOMOCO v14 motif collection :
+  <a href="https://hocomoco14.autosome.org/" target="_blank">
+  https://hocomoco14.autosome.org/ </a>
+
+- Vorontsov, I.E., Eliseeva, I.A., Zinkevich, A., Nikonov, M., Abramov,
+  S., Boytsov, A., Kamenets, V., Kasianova, A., Kolmykov, S., Yevshin,
+  I.S., Favorov, A., Medvedeva, Y.A., Jolma, A., Kolpakov, F., Makeev,
+  V.J., & Kulakovskiy, I.V. (2024). *HOCOMOCO in 2024: a rebuild of the
+  curated collection of binding models for human and mouse transcription
+  factors.* **Nucleic Acids Research**, 52(D1), D154–D163.
+  <a href="https://doi.org/10.1093/nar/gkad1077" target="_blank">
+  doi:10.1093/nar/gkad1077 </a>
+
+#### gVenn
+
+- gVenn R package :
+  <a href="https://bioconductor.org/packages/gVenn/" target="_blank">
+  https://bioconductor.org/packages/gVenn/ </a>
+
+- Tav, C. (2026). *gVenn: Proportional Venn and UpSet Diagrams for Gene
+  Sets and Genomic Regions.* R package version 2.1.0.
+  <a href="https://doi.org/10.18129/B9.bioc.gVenn" target="_blank">
+  doi:10.18129/B9.bioc.gVenn </a>
