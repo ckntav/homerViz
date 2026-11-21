@@ -243,6 +243,6 @@ homerViz
   https://bioconductor.org/packages/gVenn/ </a>
 
 - Tav, C. (2026). *gVenn: Proportional Venn and UpSet Diagrams for Gene
-  Sets and Genomic Regions.* R package version 2.1.0.
+  Sets and Genomic Regions.*
   <a href="https://doi.org/10.18129/B9.bioc.gVenn" target="_blank">
   doi:10.18129/B9.bioc.gVenn </a>
