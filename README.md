@@ -7,11 +7,19 @@ commit](https://img.shields.io/github/last-commit/ckntav/homerViz)
 
 **Visualization tools for HOMER motif enrichment results**
 
+<p align="center">
+  <img src="man/figures/homerViz_hex_sticker_motif_logo.png" width="175"/>
+</p>
+
 **homerViz** is an R package that parses
 [HOMER](http://homer.ucsd.edu/homer/) `findMotifsGenome.pl` output
 directories into tidy data frames, generates publication-ready
 visualizations, and produces interactive HTML reports to facilitate the
 exploration of motif enrichment results.
+
+<p align="center">
+<img src="man/figures/homerViz_graphical_abstract_v3_20261121.png" width="800"/>
+</p>
 
 ## Features
 
