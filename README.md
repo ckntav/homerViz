@@ -48,9 +48,9 @@ The motif enrichment analysis was performed with HOMER v4.11.1 using
 this command line:
 
 ``` bash
-findMotifsGenome.pl A549_MED1_DEX.stdchr.chr1.bed \
+findMotifsGenome.pl A549_MED1_Ctrl.stdchr.chr1.bed \
     hg38 \
-    A549_MED1_DEX_chr1_vs_HOCOMOCOv14_0p0001 \
+    A549_MED1_Ctrl_chr1_vs_HOCOMOCOv14_0p0001 \
     -p 8 -size 200 -mask \
     -mknown H14CORE_homer_format_0.0001.motif \
     -mcheck H14CORE_homer_format_0.0001.motif
@@ -64,15 +64,15 @@ library(homerViz)
 # Define the example HOMER output directory
 example_dir <- system.file(
     "extdata",
-    "A549_MED1_DEX_chr1_vs_HOCOMOCOv14_0p0001",
+    "A549_MED1_Ctrl_chr1_vs_HOCOMOCOv14_0p0001",
     package = "homerViz"
 )
 
 # Read a HOMER output directory
 homer <- read_homer_output(example_dir)
-#> Reading: A549_MED1_DEX_chr1_vs_HOCOMOCOv14_0p0001
+#> Reading: A549_MED1_Ctrl_chr1_vs_HOCOMOCOv14_0p0001
 #>   * Known motifs:  knownResults.txt
-#>   * De novo motifs: 23 motifs in homerResults/
+#>   * De novo motifs: 34 motifs in homerResults/
 ```
 
 ### 2. Visualize top motifs
@@ -82,7 +82,7 @@ homer <- read_homer_output(example_dir)
 ``` r
 plot_known_dotplot(homer)
 plot_denovo_dotplot(homer)
-#> 2 de novo motifs removed (fold enrichment NA, zero background occurrences), ranks: 12, 13.
+#> 3 de novo motifs removed (fold enrichment NA, zero background occurrences), ranks: 27, 28, 31.
 ```
 
 <img src="man/figures/README-dot-plot-1.png" alt="" width="50%" /><img src="man/figures/README-dot-plot-2.png" alt="" width="50%" />
