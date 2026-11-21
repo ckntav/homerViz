@@ -1,0 +1,38 @@
+Package: homerViz
+Title: Visualization tools for HOMER motif enrichment results
+Version: 0.99.0
+Authors@R:
+    person("Christophe", "Tav",
+    email = "christophe.tav@gmail.com",
+    role = c("aut", "cre"),
+    comment = c(ORCID = "0000-0001-8808-9617"))
+Description: Simplifies exploration of HOMER motif enrichment results by
+    parsing findMotifsGenome.pl output directories into tidy data frames.
+    Generates dot plots, scatter plots, and motif logo panels for known and
+    de novo motifs, as well as interactive HTML reports with sortable tables
+    and embedded logos. Supports ChIP-seq, ATAC-seq, and other genomic
+    assays using HOMER for motif discovery.
+License: MIT + file LICENSE
+Encoding: UTF-8
+URL: https://github.com/ckntav/homerViz
+BugReports: https://github.com/ckntav/homerViz/issues
+biocViews: Software, Visualization, MotifAnnotation, MotifDiscovery,
+    SequenceMatching, ChIPSeq, ATACSeq, Epigenetics,
+    GeneRegulation, DataImport, Transcription
+Imports:
+    ggplot2,
+    gVenn,
+    ggrepel,
+    patchwork,
+    rlang,
+    rsvg,
+    grid,
+    scales
+Roxygen: list(markdown = TRUE)
+Suggests:
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr
+Config/roxygen2/version: 8.0.0
