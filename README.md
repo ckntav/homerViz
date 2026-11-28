@@ -31,6 +31,16 @@ exploration of motif enrichment results.
 
 ## Installation
 
+The homerViz package is available through Bioconductor and GitHub.
+
+You can install it from Bioconductor using:
+
+``` r
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("homerViz")
+```
+
 To install the development version from GitHub, use:
 
 ``` r
