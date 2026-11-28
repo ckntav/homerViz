@@ -3,6 +3,7 @@ title: "homerViz: Visualization tools for HOMER motif enrichment results"
 author: "Christophe Tav"
 date: "`r format(Sys.time(), '%B %Y')`"
 package: homerViz
+bibliography: references.bib
 output:
   BiocStyle::html_document:
     toc: true
@@ -31,7 +32,7 @@ knitr::opts_chunk$set(
 # Introduction
 
 **homerViz** streamlines the exploration and visualization of output from
-[HOMER](http://homer.ucsd.edu/homer/) `findMotifsGenome.pl`, a tool for
+[HOMER](http://homer.ucsd.edu/homer/) `findMotifsGenome.pl` [@heinz2010], a tool for
 motif enrichment analysis widely used in ChIP-seq, ATAC-seq, and related assays.
 
 HOMER produces large output directories containing:
@@ -87,12 +88,11 @@ library(homerViz)
 
 The package ships with an example HOMER output directory from a MED1 ChIP-seq
 experiment in A549 lung carcinoma cells under control conditions (Ctrl),
-matched against HOCOMOCOv14 at a p-value threshold of 10⁻⁴ using HOMER
+matched against HOCOMOCOv14 [@vorontsov2024] at a p-value threshold of 10⁻⁴ using HOMER
 v4.11.1. Peaks reproducible across both replicates were kept, and to keep the
 dataset lightweight, results are restricted to peaks on *chromosome 1*.
 
-These data originate from Tav *et al.* (2023)
-(<a href="https://doi.org/10.3389/fgene.2023.1237092" target="_blank">doi:10.3389/fgene.2023.1237092</a>).
+These data originate from @tav2023.
 
 ```{r load}
 # Load the example path of example dir A549 MED1 ChIP-seq peaks (subset on chr1 for demo)
@@ -241,7 +241,7 @@ plot_denovo_logos(homer)
 
 All plotting functions return `ggplot2` (or `patchwork`) objects. Save them to
 PDF, PNG or SVG with `saveViz()`, re-exported from the
-[gVenn](https://bioconductor.org/packages/gVenn) package.
+[gVenn](https://bioconductor.org/packages/gVenn) package [@gvenn].
 
 ```{r save-plot}
 p <- plot_known_dotplot(homer)
@@ -310,63 +310,11 @@ The `p_cutoff` parameter is available in `plot_known_dotplot()`,
 
 <br>
 
-# References
-
-### Example A549 MED1 ChIP-seq dataset
-
-- Tav, C., Fournier, É., Fournier, M., Khadangi, F., Baguette, A., Côté, M.C., Silveira, M.A.D., Bérubé-Simard, F.-A., Bourque, G., Droit, A., & Bilodeau, S. (2023).
-*Glucocorticoid stimulation induces regionalized gene responses within topologically associating domains.*
-**Frontiers in Genetics**, 14, 1237092.
-<a href="https://doi.org/10.3389/fgene.2023.1237092" target="_blank">
-doi:10.3389/fgene.2023.1237092
-</a>
-
-### HOMER
-
-- **HOMER software** :
-<a href="http://homer.ucsd.edu/homer/" target="_blank">
-http://homer.ucsd.edu/homer/
-</a>
-
-- Heinz, S., Benner, C., Spann, N., Bertolino, E., Lin, Y.C., Lassman, P., Bhatt, D.L., Benner, C., & Glass, C.K. (2010).
-*Simple combinations of lineage-determining transcription factors prime cis-regulatory elements required for macrophage and B cell identities.*
-**Molecular Cell**, 38(4), 576–589.
-<a href="https://doi.org/10.1016/j.molcel.2010.05.004" target="_blank">
-doi:10.1016/j.molcel.2010.05.004
-</a>
-
-### HOCOMOCO v14
-
-- **HOCOMOCO v14 motif collection** :
-<a href="https://hocomoco14.autosome.org/" target="_blank">
-https://hocomoco14.autosome.org/
-</a>
-
-- Vorontsov, I.E., Eliseeva, I.A., Zinkevich, A., Nikonov, M., Abramov, S., Boytsov, A., Kamenets, V., Kasianova, A., Kolmykov, S., Yevshin, I.S., Favorov, A., Medvedeva, Y.A., Jolma, A., Kolpakov, F., Makeev, V.J., & Kulakovskiy, I.V. (2024).
-*HOCOMOCO in 2024: a rebuild of the curated collection of binding models for human and mouse transcription factors.*
-**Nucleic Acids Research**, 52(D1), D154–D163.
-<a href="https://doi.org/10.1093/nar/gkad1077" target="_blank">
-doi:10.1093/nar/gkad1077
-</a>
-
-### gVenn
-
-- **gVenn R package** :
-<a href="https://bioconductor.org/packages/gVenn/" target="_blank">
-https://bioconductor.org/packages/gVenn/
-</a>
-
-- Tav, C. (2026).
-*gVenn: Proportional Venn and UpSet Diagrams for Gene Sets and Genomic Regions.*
-<a href="https://doi.org/10.18129/B9.bioc.gVenn" target="_blank">
-doi:10.18129/B9.bioc.gVenn
-</a>
-
-<br>
-
 # Session info
 
 This vignette was built with the following R session:
 ```{r session-info}
 sessionInfo()
 ```
+
+# References
