@@ -30,6 +30,7 @@ Imports:
     scales
 Roxygen: list(markdown = TRUE)
 Suggests:
+    BiocStyle,
     knitr,
     rmarkdown,
     testthat (>= 3.0.0)

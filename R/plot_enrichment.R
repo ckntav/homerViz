@@ -369,7 +369,7 @@ plot_denovo_scatter <- function(
     if (color_scheme == "viridis") {
         ggplot2::scale_color_viridis_c(
             name      = legend_name,
-            option    = "rocket",
+            option    = "viridis",
             direction = -1,
             begin     = 0.1,
             end       = 0.95
