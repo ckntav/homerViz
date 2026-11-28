@@ -24,7 +24,7 @@ its \verb{$denovo} data frame.}
 \code{NULL} (auto-derived from \code{homer_output}: BED file name + database).}
 
 \item{color_scheme}{Character. One of \code{"homerViz"}, \code{"red"}, \code{"blue"},
-\code{"green"}, \code{"blue"}, \code{"purple"}, or \code{"viridis"}. Default \code{"homerViz"}.}
+\code{"green"}, \code{"purple"}, or \code{"viridis"}. Default \code{"homerViz"}.}
 }
 \value{
 A \code{ggplot} object.

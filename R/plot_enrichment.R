@@ -15,7 +15,7 @@
 #' @param subtitle Character. Subtitle shown below the plot title. Default
 #'   `NULL` (auto-derived from `homer_output`: BED file name + database).
 #' @param color_scheme Character. One of `"homerViz"`, `"red"`, `"blue"`,
-#'   `"green"`, `"blue"`, `"purple"`, or `"viridis"`. Default `"homerViz"`.
+#'   `"green"`, `"purple"`, or `"viridis"`. Default `"homerViz"`.
 #'
 #' @return A `ggplot` object.
 #' @export
@@ -80,7 +80,7 @@ plot_known_dotplot <- function(
 #' @param subtitle Character. Subtitle shown below the plot title. Default
 #'   `NULL` (auto-derived from `homer_output`: BED file name + database).
 #' @param color_scheme Character. One of `"homerViz"`, `"red"`, `"blue"`,
-#'   `"green"`, `"blue"`, `"purple"`, or `"viridis"`. Default `"homerViz"`.
+#'   `"green"`, `"purple"`, or `"viridis"`. Default `"homerViz"`.
 #'
 #' @return A `ggplot` object.
 #' @export
@@ -156,7 +156,7 @@ plot_denovo_dotplot <- function(
 #' @param subtitle Character. Subtitle shown below the plot title. Default
 #'   `NULL` (auto-derived from `homer_output`: BED file name + database).
 #' @param color_scheme Character. One of `"homerViz"`, `"red"`, `"blue"`,
-#'   `"green"`, `"blue"`, `"purple"`, or `"viridis"`. Default `"homerViz"`.
+#'   `"green"`, `"purple"`, or `"viridis"`. Default `"homerViz"`.
 #' @param label_top_n Integer or `NULL`. Number of top motifs to label.
 #'   Default `NULL` = auto-label high-confidence motifs (p <= 1e-50).
 #'   Set to `0` to suppress all labels.
@@ -228,7 +228,7 @@ plot_known_scatter <- function(
 #' @param subtitle Character. Subtitle shown below the plot title. Default
 #'   `NULL` (auto-derived from `homer_output`: BED file name + database).
 #' @param color_scheme Character. One of `"homerViz"`, `"red"`, `"blue"`,
-#'   `"green"`, `"blue"`, `"purple"`, or `"viridis"`. Default `"homerViz"`.
+#'   `"green"`, `"purple"`, or `"viridis"`. Default `"homerViz"`.
 #' @param label_top_n Integer or `NULL`. Number of top motifs to label.
 #'   Default `NULL` = auto-label high-confidence motifs (p <= 1e-50).
 #'   Set to `0` to suppress all labels.
